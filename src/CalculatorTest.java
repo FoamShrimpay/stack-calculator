@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.junit.*;
 import static org.junit.Assert.*;
 
 public class CalculatorTest {
@@ -22,7 +23,7 @@ public class CalculatorTest {
         calc.loadConstant(2);
         assertEquals("[3 7 2].", calc.toString());
     }
-    
+   
     @Test
     public void testAdd() {
         calc.loadConstant(5);
@@ -33,7 +34,7 @@ public class CalculatorTest {
         calc.add();
         assertEquals("[12].", calc.toString());
     }
-    
+   
     @Test
     public void testSubtract() {
         calc.loadConstant(5);
@@ -44,7 +45,7 @@ public class CalculatorTest {
         calc.subtract();
         assertEquals("[-2].", calc.toString());
     }
-    
+    @Ignore
     @Test
     public void testMultiply() {
         calc.loadConstant(5);
@@ -56,6 +57,7 @@ public class CalculatorTest {
         assertEquals("[60].", calc.toString());
     }
     
+    @Ignore
     @Test
     public void testDivide() {
         calc.loadConstant(15);
@@ -67,6 +69,7 @@ public class CalculatorTest {
         assertEquals("[1].", calc.toString());
     }
     
+    @Ignore
     @Test
     public void testTotal() {
         calc.loadConstant(1);
